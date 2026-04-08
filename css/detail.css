@@ -1,0 +1,38 @@
+.detail-card {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-content {
+    padding: 30px;
+}
+
+.detail-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.detail-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.back-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn .btn {
+    display: inline-block;
+}

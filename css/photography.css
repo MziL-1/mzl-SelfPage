@@ -1,0 +1,7 @@
+.grid-6 .card {
+    height: 150px;
+}
+
+.grid-6 .card:first-child {
+    height: 320px;
+}
