@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MZL - 摄影</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/photography.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">MZL</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="photography.html">摄影</a></li>
+                <li><a href="study.html">学习</a></li>
+                <li><a href="game.html">游戏</a></li>
+                <li><a href="entertainment.html">娱乐</a></li>
+                <li><a href="call.html">call mzl</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="container">
+            <div class="page-header">
+                <h1>摄影作品</h1>
+                <button class="btn" id="publishBtn">发布</button>
+            </div>
+            <div class="grid grid-6" id="photoGrid">
+                <a href="detail.html?id=1&type=photography" class="card" style="background-image: url('images/photo1.jpg');">
+                    <span class="card-title">作品1</span>
+                </a>
+                <a href="detail.html?id=2&type=photography" class="card" style="background-image: url('images/photo2.jpg');">
+                    <span class="card-title">作品2</span>
+                </a>
+                <a href="detail.html?id=3&type=photography" class="card" style="background-image: url('images/photo3.jpg');">
+                    <span class="card-title">作品3</span>
+                </a>
+                <a href="detail.html?id=4&type=photography" class="card" style="background-image: url('images/photo4.jpg');">
+                    <span class="card-title">作品4</span>
+                </a>
+                <a href="detail.html?id=5&type=photography" class="card" style="background-image: url('images/photo5.jpg');">
+                    <span class="card-title">作品5</span>
+                </a>
+                <a href="detail.html?id=6&type=photography" class="card" style="background-image: url('images/photo6.jpg');">
+                    <span class="card-title">作品6</span>
+                </a>
+                <a href="detail.html?id=7&type=photography" class="card" style="background-image: url('images/photo7.jpg');">
+                    <span class="card-title">作品7</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>邮箱：<a href="mailto:15188399136@163.com">15188399136@163.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Publish Modal -->
+    <div class="modal" id="publishModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>发布作品</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="publishForm">
+                <div class="form-group">
+                    <label for="title">名称</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">上传图片</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">介绍</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <button type="submit" class="btn">发布</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/photography.js"></script>
+</body>
+</html>

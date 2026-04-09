@@ -1,0 +1,22 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-list .card {
+    width: calc(25% - 15px);
+    height: 200px;
+}
+
+@media (max-width: 1024px) {
+    .card-list .card {
+        width: calc(33.33% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-list .card {
+        width: calc(50% - 10px);
+    }
+}
