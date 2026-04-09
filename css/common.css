@@ -14,12 +14,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
     color: var(--text-color);
     min-height: 100vh;
     background: url('../images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
+    position: relative;
 }
 
 body::before {
@@ -42,15 +47,16 @@ a {
 .header {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 15px 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
 }
 
 .nav {
     max-width: 1200px;
+    height: 60px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -62,12 +68,18 @@ a {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
+    flex-shrink: 0;
+    display: block;
+    /* z-index: 10000; */
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    /* justify-content: flex-end; */
+    gap: 25px;
     list-style: none;
+    /* flex-shrink: 0; */
+    /* z-index: 10000; */
 }
 
 .nav-links a {
@@ -82,7 +94,7 @@ a {
 
 /* Main Content */
 .main {
-    padding-top: 80px;
+    padding-top: 60px;
     min-height: 100vh;
 }
 
@@ -150,14 +162,14 @@ a {
 
 /* Footer */
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 15px 0;
     text-align: center;
-    z-index: 1000;
+    margin-top: 40px;
 }
 
 .footer-content {
