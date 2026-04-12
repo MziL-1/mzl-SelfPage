@@ -1,0 +1,31 @@
+name: Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main, master]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: OpenCode Code Review
+        uses: anomalyco/opencode/github@latest
+        with:
+          model: anthropic/claude-sonnet-4-20250514
+          prompt: |
+            Review this pull request for:
+            - Security issues (XSS, input validation, etc.)
+            - Performance concerns
+            - Code quality and best practices
+            - Potential bugs
+            Provide a structured review with specific file references and line numbers.

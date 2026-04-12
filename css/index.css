@@ -77,7 +77,19 @@
     text-align: center;
     z-index: 1;
     /* transform: translate(-50%, -50%); */
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
+}
+.hobby .item:nth-child(1) {
+    transition: all .3s;
+}
+.hobby .item:nth-child(2) {
+    transition: all .4s;
+}
+.hobby .item:nth-child(3) {
+    transition: all .6s;
+}
+.hobby .item:nth-child(4) {
+    transition: all .8s;
 }
 .hobby-title:hover ~ .hobby .item:nth-child(1) {
     transform: translate(-70%, -70%);
